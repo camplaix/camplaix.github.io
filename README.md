@@ -109,7 +109,7 @@ HDSPe AIO Pro
 
 Babyface
 <video controls width="300" height="50">
-  <source src="audio/4%20channel%20Babyface%20AMD" type="audio/mpeg">
+  <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
@@ -123,12 +123,11 @@ HDSPe AIO Pro
 
 Babyface
 <video controls width="300" height="50">
-  <source src="audio/8%20channel%20Babyface%20AMD" type="audio/mpeg">
+  <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-
+<br>
 HDSPe AIO Pro
-
 <video controls width="300" height="50">
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
@@ -149,19 +148,63 @@ Looking up at both images, we can infer that the PCIe interface enables a greate
 #### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 
 1 channel
-> [Babyface AMD](https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3)\
-> [Babyface Intel HD](https://od.lk/s/NDlfMzg5NjQ3ODdf/1%20channel%20Babyface%20intel%20HD.mp3)\
-> [Babyface NVIDIA](https://od.lk/s/NDlfMzg5NjQ3ODhf/1%20channel%20Babyface%20NVIDIA.mp3)
 
-4 channels
-> [Babyface AMD](https://od.lk/s/NDlfMzg5NjQ3OTFf/4%20channel%20Babyface%20AMD.mp3)\
-> [Babyface Intel HD](https://od.lk/s/NDlfMzg5NjQ3OTJf/4%20channel%20Babyface%20intel%20HD.mp3)\
-> [Babyface NVIDIA](https://od.lk/s/NDlfMzg5NjQ3ODhf/1%20channel%20Babyface%20NVIDIA.mp3)
+AMD
+<video controls width="300" height="50">
+  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+NVIDIA
+<video controls width="300" height="50">
+    <source src="audio/1%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+intel UHD
+<video controls width="300" height="50">
+  <source src="audio/1%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br><br>
+4-channel
 
-8 channels
-> [Babyface AMD](https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3)\
-> [Babyface Intel HD](https://od.lk/s/NDlfMzg5NjQ3OTdf/8%20channel%20Babyface%20intel%20HD.mp3)\
-> [Babyface NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OThf/8%20channel%20Babyface%20NVIDIA.mp3)
+AMD
+<video controls width="300" height="50">
+  <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+NVIDIA
+<video controls width="300" height="50">
+    <source src="audio/4%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+intel UHD
+<video controls width="300" height="50">
+  <source src="audio/4%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br><br>
+8-channel
+AMD
+<video controls width="300" height="50">
+  <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+NVIDIA
+<video controls width="300" height="50">
+    <source src="audio/8%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+intel UHD
+<video controls width="300" height="50">
+  <source src="audio/8%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
 
 Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
 AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
@@ -169,17 +212,49 @@ AMD was the top performer with the audio evidence revealing fewest audible dropo
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
 
 1 channel
-> [HDSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3)\
-> [HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ4MDBf/1%20channel%20AIO%20NVIDIA.mp3)
 
+AMD
+<video controls width="300" height="50">
+  <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+NVIDIA
+<video controls width="300" height="50">
+    <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br><br>
 4 channels
+
+AMD
+<video controls width="300" height="50">
+  <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+NVIDIA
+<video controls width="300" height="50">
+    <source src="audio/4%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
 > [HSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3ODlf/4%20channel%20AIO%20AMD.mp3)\
 > [HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OTBf/4%20channel%20AIO%20NVIDIA.mp3!)
-
+<br><br>
 8 channels
-> [HDSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3!)\
-> [HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OTVf/8%20channel%20AIO%20NVIDIA.mp3!)
 
+AMD
+<video controls width="300" height="50">
+  <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+NVIDIA
+<video controls width="300" height="50">
+    <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br><br>
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 <br><br>
 ## Excluding *Core 0* in Ableton Live with CPU affinity
@@ -197,13 +272,33 @@ The results were surprising here. Limiting the analysis to Babyface Pro FS, it w
 Babyface Pro FS & AMD graphics
 
 4-channel
-> [4 active cores](https://od.lk/s/NDlfMzg5NjU1Njhf/4%20channel%204%20cores.mp3)\
-> [5 active Cores excluding Ableton from CPU 0](https://od.lk/s/NDlfMzg5NjU1NjVf/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3)
 
+4 active cores
+<video controls width="300" height="50">
+    <source src="audio/4%20channel%204%20cores.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+5 active Cores excluding Ableton from CPU 0
+<video controls width="300" height="50">
+    <source src="audio/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br><br>
 8-channel
-> [4 active cores](https://od.lk/s/NDlfMzg5NjU1NjZf/8%20channel%20%204%20cores.mp3)\
-> [5 active cores excluding Ableton from CPU 0](https://od.lk/s/NDlfMzg5NjU1Njdf/8%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3)
 
+4 active cores
+<video controls width="300" height="50">
+    <source src="audio/8%20channel%20%204%20cores.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br>
+5 active cores excluding Ableton from CPU 0
+<video controls width="300" height="50">
+    <source src="audio/8%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+<br><br>
 ## Ableton Configuration Options
 
 In Live 12.2, ableton introduced a `GPU renderer` toggle, a hardware-accelerated GPU renderer that can be enabled on Windows computers to improve Live’s UI performance. Activating it showed no net benefit with the three graphics card. During high load stress tests it made the playhead and animations more sluggish, with lower fps. In some contexts enabled it made the audio dropouts slightly worse, although hard to quantify at times - making it difficult to draw accurate conclusions.
