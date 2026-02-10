@@ -85,7 +85,7 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 
 Using the AMD graphics card as reference - The PCIe AIO Pro allowed dropout-free playback at a higher number of plug-in instances, while Babyface Pro FS performance hit an earlier ceiling, with an average of 5 fewer instances per track. It is crucial to understand the test subjectivity of the plug-in count measurement being wildly dependent on the CPU load taken by single instance. One VST that hogs a lot of resources could result in little to zero difference in numbers, if the granularity isn't low enough. In contrast, a plug-in with very low CPU requirements like Ableton Live's compressor, would greatly magnify the count difference because more units are required to reach the same CPU utilization.
 
-As side note, setting Ableton process affinity to exclude CPU 0 has positive effects on the single channel test, possibly leaving the software free from the core where most interrupts are registered. Detrimental effects were seen for the remaining tests, where all cores are fully utilized - because there would be one fewer processor to distribute the processing load.
+As side note, setting Ableton process affinity to exclude `CPU 0` has positive effects on the single channel test, possibly leaving the software free from the core where most interrupts are registered. Detrimental effects were seen for the remaining tests, where all cores are fully utilized - because there would be one fewer processor to distribute the processing load.
 <br><br>
 ![img](images/PluginInstances.png)\
 <sub>*Total number of plug-in instances across the three projects*</sub>
@@ -102,7 +102,7 @@ As side note, setting Ableton process affinity to exclude CPU 0 has positive eff
 [Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3)\
 [HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3)
 <br><br>
-When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a ![u]broad range![/u] - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
+When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a <ins>broad range</ins> - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
 <br><br>
 ![img](images/Four_loaded_cores_Babyface.png)\
 <sub>*% CPU utilization in Task Manager running the 8 channel project in Ableton Live, with Babyface Pro FS USB 2.0*</sub>
@@ -152,13 +152,13 @@ With the PCIe card, generated dropout artifacts have a less obvious character to
 <br><br>
 ## Excluding *Core 0* in Ableton Live with CPU affinity
 
-An additional experiment with the Babyface FS Pro to verify possible performance enhancement related to CPU core affinity. Using the AMD adapter as graphics reference to minimize bottlenecks, this investigation is most relevant in the 4 and 8-channel projects, where all cores are fully utilized. This brief test consisted in increasing the number of active CPUs to 5 physical cores, from the previous 4, and exclude Ableton process from CPU 0 by setting its core affinity to the other remaining cores. The plug-in CPU load remains equally distributed across the previous four active cores, with an additional undisturbed core (*CPU 0*), except for the background processes and DPC interrupts.
+An additional experiment with the Babyface FS Pro to verify possible performance enhancement related to CPU core affinity. Using the AMD adapter as graphics reference to minimize bottlenecks, this investigation is most relevant in the 4 and 8-channel projects, where all cores are fully utilized. This brief test consisted in increasing the number of active CPUs to 5 physical cores, from the previous 4, and exclude Ableton process from `CPU 0` by setting its core affinity to the other remaining cores. The plug-in CPU load remains equally distributed across the previous four active cores, with an additional undisturbed core for the the remaining background processes and DPC interrupts.
 <br><br>
 ![img](images/Affinity_selection.png)\
-<sub>*Processor affinity setting excluding ```CPU 0```*</sub>
+<sub>*Processor affinity setting excluding `CPU 0`*</sub>
 <br><br><br>
 ![img](images/Affinity_5Cores.png)\
-<sub>*```CPU 0``` unassigned, and the remaining 4 loaded cores in display*</sub>
+<sub>*`CPU 0` unassigned, and the remaining 4 loaded cores in display*</sub>
 <br><br>
 The results were surprising here. Limiting the analysis to Babyface Pro FS, it was possible to ascertain complete dropout-free playback at the plug-in count described above, where artifacts were previously audible.
 
@@ -174,38 +174,44 @@ Babyface Pro FS & AMD graphics
 <br><br>
 ## Ableton Configuration Options
 
-In Live 12.2, ableton introduced a *GPU renderer* toggle, a hardware-accelerated GPU renderer that can be enabled on Windows computers to improve Live’s UI performance. Activating it showed no net benefit with the three graphics card. During high load stress tests it made the playhead and animations more sluggish, with lower fps. In some contexts enabled it made the audio dropouts slightly worse, although hard to quantify at times - making it difficult to draw accurate conclusions.
+In Live 12.2, ableton introduced a `GPU renderer` toggle, a hardware-accelerated GPU renderer that can be enabled on Windows computers to improve Live’s UI performance. Activating it showed no net benefit with the three graphics card. During high load stress tests it made the playhead and animations more sluggish, with lower fps. In some contexts enabled it made the audio dropouts slightly worse, although hard to quantify at times - making it difficult to draw accurate conclusions.
 
-The *Options.txt* file can enable a few experimental and unsupported features in Ableton Live. It is located in *%AppData%\Ableton\Live 12.3.5\Preferences\Options.txt*. Adding the line *-_ForceGdiBackend* is a Windows-only fix designed to resolve high GPU usage and graphical lag by forcing the application to use the GDI backend for rendering. This technique forces the UI to render differently, often reducing GPU load to near 0%. Historically, it provided modest benefits using integrated GPU like the intel UHD graphics, often with a reduction in glitching. Tests were done with the flag enabled and absent from *Options.txt*, and no significant differences are worth emphasizing.
+>`%AppData%\Ableton\Live 12.3.5\Preferences\Options.txt`
+The `Options.txt` file can enable a few experimental and unsupported features in Ableton Live.  Adding the line `-_ForceGdiBackend` is a Windows-only fix designed to resolve high GPU usage and graphical lag by forcing the application to use the GDI backend for rendering. This technique forces the UI to render differently, often reducing GPU load to near 0%. Historically, it provided modest benefits using integrated GPU like the intel UHD graphics, often with a reduction in glitching. Tests were done with the flag enabled and absent from *Options.txt*, and no significant differences are worth emphasizing.
 <br><br>
 ## MMCSS Registry Flags
 
 As some of you may know, the Multimedia Class Scheduler service (MMCSS) *enables multimedia applications to ensure that their time-sensitive processing receives prioritized access to CPU resources. This service enables multimedia applications to utilize as much of the CPU as possible without denying CPU resources to lower-priority applications.* It was introduced in Windows Vista with the help of Mark Russinovich windows internals team, with the help of improving real-time thread priorization - improving from its predecessor, Windows XP. It has been a highly disputed feature since it works in some DAWs, while it can hinder performance in others. RME and Antelope enable setting the ASIO driver MMCSS service subscription through a flag. It used to be the case that Ableton overrided MMCSS thread prioritization - but such practice doesn't happen anymore since a specific Ableton Live version.
 
 As some of you may know, the Multimedia Class Scheduler service (MMCSS) *enables multimedia applications to ensure that their time-sensitive processing receives prioritized access to CPU resources. This service enables multimedia applications to utilize as much of the CPU as possible without denying CPU resources to lower-priority applications.* It was introduced in Windows Vista with the help of Mark Russinovich windows internals team, with the help of improving real-time thread priorization - improving from its predecessor, Windows XP. It has been a highly disputed feature since it works in some DAWs, while it can hinder performance in others. RME and Antelope enable setting the ASIO driver MMCSS service subscription through a flag. It used to be the case that Ableton overrided MMCSS thread prioritization - but such practice doesn't happen anymore since a specific Ableton Live version.
-[Microsoft on Multimedia Class Scheduler Service](https://learn.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service)
-<br><br>
-```Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia```\
-```%SystemRoot%\System32\Drivers\MMCSS.sys```
-<br><br>
+
+>[Microsoft on Multimedia Class Scheduler Service](https://learn.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service)
+
+```json
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia
+%SystemRoot%\System32\Drivers\MMCSS.sys
+```
+
 MMCSS service in requires a restart after registry changes (use CMD):
 
-```sc start MMCSS```\
-```sc stop MMCSS```
-<br><br>
+```cmd
+sc start MMCSS
+sc stop MMCSS
+```
+
 To confirm the ASIO driver thread has subscribed to MMCSS, use Sysinternals *Process Explorer* and ensure the ASIO thread priority is raised from 15 to 26.
 
 In general, attempting to optimize MMCSS hidden registry flags showed a performance degradation, with reduced dropout resilience. In other cases there weren't audible differences.
-<br><br>
+
 List of attempted changes:
 
-```NoLazyMode = 1``` - increased artifacts *(disables IdleDetection routine)* \
-```LazyModeTimeout < 1000000 ```(100 ms) from the max. default value - increased artifacts\
-```IdleDetectionCycles" = 2```  values of 1..31 other than the default 2 - no audible improvement\
-```affinity``` mask in ```Pro Audio``` task to fewer CPU cores - increased artifacts\
-```SystemResponsiveness = 10``` - no audible improvements\
+`NoLazyMode = 1` - increased artifacts *(disables IdleDetection routine)* \
+`LazyModeTimeout < 1000000`(100 ms) from the max. default value - increased artifacts\
+`IdleDetectionCycles" = 2`  values of 1..31 other than the default 2 - no audible improvement\
+`affinity` mask in `Pro Audio` task to fewer CPU cores - increased artifacts\
+`SystemResponsiveness = 10` - no audible improvements\
 <sub>*by default, this is 20 percent; MMCSS monitors CPU usage to ensure that multimedia threads aren’t boosted for more than 8 ms over a 10 ms period if required by lower priority applications*</sub>
-<br><br>
+
 Some useful links for a deeper dive in the MMCSS system service:\
-[github.com/nohuto](https://github.com/nohuto/win-config/blob/main/system/desc.md#mmcss-values)\
-[github.com/djdallmann](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES)
+>[github.com/nohuto](https://github.com/nohuto/win-config/blob/main/system/desc.md#mmcss-values)\
+>[github.com/djdallmann](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES)
