@@ -2,7 +2,7 @@
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
 <video controls width="300" height="50">
-  <source src="https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  <source src="/audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the video tag.
 </video>
 
