@@ -1,8 +1,6 @@
 # Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
-[Link text](https://gabalpha.github.io/read-audio/?p=https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3)
-
 <video controls width="300" height="50">
   <source src="https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the video tag.
