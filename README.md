@@ -1,4 +1,4 @@
-<img width="1144" height="497" alt="image" src="https://github.com/user-attachments/assets/bf337483-df2a-4ff5-b3b4-aa98c7b43eda" /># Ableton Live 12
+# Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
