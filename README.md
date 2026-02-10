@@ -1,11 +1,12 @@
-## __Ableton Live 12__
-## *Ableton Live 12*
-## Ableton Live 12
+# Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
-*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*
- 
+<sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
+<br>
+<br>
 Hello,
+
+For the past few weeks, I've been running some benchmarks in Ableton Live 12, using two RME interfaces and three graphics cards to evaluate and measure potential differences in performance of PCIe, USB, and the graphics adapter impact, in a low-latency, high CPU load context.\
 
 For the past few weeks, I've been running some benchmarks in Ableton Live 12, using two RME interfaces and three graphics cards to evaluate and measure potential differences in performance of PCIe, USB, and the graphics adapter impact, in a low-latency, high CPU load context.
 
@@ -16,15 +17,13 @@ Assess low-latency performance at high CPU load in Ableton Live 12 and Windows 1
 - AMD vs NVIDIA vs Intel UHD integrated graphics
 - PCIe vs USB 2.0
 
-
 ## Test Methodology
-
 Progressively load Ableton 12 audio track with an increasing number of plug-in instances.
 The test results are measured quantitatively, by the maximum number of plug-in instances possible at the edge of audible dropouts/glitching artifacts.
 Solely audio tracks - using a custom audio clip with staccato timing cues to allow the perceptual intelligibility of real-time audio engine dropouts (caused by the buffer processing time overtaking the time it takes to play it). The test plug-in used for this purpose effect was Live's built-in *Echo*. It provides a good balance between CPU load and granularity when adding up the effects count. The resulting audio was recorded externally into laptop connected to both interface outputs.
 
-![img](https://i.imgur.com/4j6fJIA.png)
-*Live's built-in Echo modulation delay effect*
+![Echo](https://i.imgur.com/4j6fJIA.png)\
+<sub>*Live's built-in Echo modulation delay effect*</sub>
 
 ## Test System
 
@@ -58,13 +57,12 @@ Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance
 *Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*
 
 ### ASIO Buffer Size
+
 | Soundcard | Buffer size |
 |---:|---:|
 |AIO Pro|32 samples|
 |Babyface Pro FS| 48 samples|
 
-- AIO Pro : 32 samples
-- Babyface Pro FS : 48 samples
 *Tests were also run at a more level playing field of 64 samples, but results suggested differences are more pronounced at the lowest available buffer sizes.*
 
 ![img](https://i.imgur.com/EDIo6UL.png)
@@ -98,7 +96,7 @@ As side note, setting Ableton process affinity to exclude CPU 0 has positive eff
 *Total number of plug-in instances across the three projects*
 
 1 channel
-
+[Babyface PRO FS & AMD](https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3)
 <audio controls>
   <source src="https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
 </audio>
@@ -209,11 +207,11 @@ In general, attempting to optimize MMCSS hidden registry flags showed a performa
 
 List of attempted changes:
 
-NoLazyMode = 1 - increased artifacts *(disables IdleDetection routine)* 
-LazyModeTimeout < 1000000 (100 ms) from the max. default value - increased artifacts
-IdleDetectionCycles" = 2; values of 1..31 other than the default 2 - no audible improvement
-Restricting affinity mask in Pro Audio task to fewer CPU cores - increased artifacts
-SystemResponsiveness = 10 - no audible improvements *(by default, this is 20 percent; MMCSS monitors CPU usage to ensure that multimedia threads aren’t boosted for more than 8 ms over a 10 ms period if required by lower priority applications)*
+```NoLazyMode = 1``` - increased artifacts *(disables IdleDetection routine)* 
+```LazyModeTimeout < 1000000 ```(100 ms) from the max. default value - increased artifacts
+```IdleDetectionCycles" = 2```  values of 1..31 other than the default 2 - no audible improvement
+Restricting ```affinity``` mask in ```Pro Audio``` task to fewer CPU cores - increased artifacts
+```SystemResponsiveness = 10``` - no audible improvements *(by default, this is 20 percent; MMCSS monitors CPU usage to ensure that multimedia threads aren’t boosted for more than 8 ms over a 10 ms period if required by lower priority applications)*
 
 Some useful links for a deeper dive in the MMCSS system service:
 https://github.com/nohuto/win-config/blob/main/system/desc.md#mmcss-values!
