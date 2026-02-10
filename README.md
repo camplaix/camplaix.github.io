@@ -32,8 +32,8 @@ The CPU configuration was modified for easier analysis - restricting the active 
 <br><br>
 ### DPC latency measurements
 
-Intel UHD graphics/AMD RX 6400 : ~5-10 with rare peaks of 50 microseconds
-NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent peaks of 160 microseconds\
+Intel UHD graphics/AMD RX 6400 : ~5-10 with rare peaks of 50 microseconds\
+NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent peaks of 160 microseconds
 
 <sub>**set to maximum power performance; Message Signaled Interrupts (MSI) automatically set for AMD and NVIDIA*</sub>
 <br><br>
@@ -105,27 +105,27 @@ HDSPe AIO Pro
 </video>
 
 
-4 channels
-Babyface
+4 channels\
+Babyface\
 <video controls width="300" height="50">
   <source src="audio/4%20channel%20Babyface%20AMD" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 
-HDSPe AIO Pro
+HDSPe AIO Pro\
 <video controls width="300" height="50">
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 
-8 channels
-Babyface
+8 channels\
+Babyface\
 <video controls width="300" height="50">
   <source src="audio/8%20channel%20Babyface%20AMD" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 
-HDSPe AIO Pro
+HDSPe AIO Pro\
 <video controls width="300" height="50">
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
