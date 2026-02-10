@@ -91,40 +91,37 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 <sub>*Total number of plug-in instances across the three projects*</sub>
 <br><br>
 
-1 channel\
-Babyface
+1 channel
 
+Babyface
 <video controls width="300" height="50">
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-
+<br>
 HDSPe AIO Pro
-
 <video controls width="300" height="50">
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
+<br><br>
+4 channels
 
-
-4 channels\
 Babyface
-
 <video controls width="300" height="50">
   <source src="audio/4%20channel%20Babyface%20AMD" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-
+<br>
 HDSPe AIO Pro
-
 <video controls width="300" height="50">
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
+<br><br>
+8 channels
 
-8 channels\
 Babyface
-
 <video controls width="300" height="50">
   <source src="audio/8%20channel%20Babyface%20AMD" type="audio/mpeg">
   Your browser does not support the tag.
