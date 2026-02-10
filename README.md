@@ -2,60 +2,70 @@
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
-<br>
-<br>
+<br><br>
 Hello,
 
-For the past few weeks, I've been running some benchmarks in Ableton Live 12, using two RME interfaces and three graphics cards to evaluate and measure potential differences in performance of PCIe, USB, and the graphics adapter impact, in a low-latency, high CPU load context.\
-
 For the past few weeks, I've been running some benchmarks in Ableton Live 12, using two RME interfaces and three graphics cards to evaluate and measure potential differences in performance of PCIe, USB, and the graphics adapter impact, in a low-latency, high CPU load context.
-
+<br><br>
 
 ## Test Objective
-
 Assess low-latency performance at high CPU load in Ableton Live 12 and Windows 11 25H2
 - AMD vs NVIDIA vs Intel UHD integrated graphics
 - PCIe vs USB 2.0
+<br><br>
 
 ## Test Methodology
 Progressively load Ableton 12 audio track with an increasing number of plug-in instances.
 The test results are measured quantitatively, by the maximum number of plug-in instances possible at the edge of audible dropouts/glitching artifacts.
 Solely audio tracks - using a custom audio clip with staccato timing cues to allow the perceptual intelligibility of real-time audio engine dropouts (caused by the buffer processing time overtaking the time it takes to play it). The test plug-in used for this purpose effect was Live's built-in *Echo*. It provides a good balance between CPU load and granularity when adding up the effects count. The resulting audio was recorded externally into laptop connected to both interface outputs.
-
+<br><br><br>
 ![Echo](https://i.imgur.com/4j6fJIA.png)\
 <sub>*Live's built-in Echo modulation delay effect*</sub>
-
+<br><br>
 ## Test System
 
 Somewhat aged but still reliable and performant : Coffee Lake i7 8700K / 16 GB RAM with Windows 11 25H2. A minimal number of connected peripherals - One NVMe SSD storage, graphics card, and sound interfaces. Power plan set to *Ultimate Performance*. Other tweaks include C-States off and Virtualization-based Security (VBS) disabled. 
 
 The CPU configuration was modified for easier analysis - restricting the active CPU to 4 physical cores (No *Hyper-Threading*), allowing the system to reach an earlier ceiling, without having to exhaustively multiply the plug-in count to unreasonable amounts. CPU *Turbo* was kept on, and *Sync All cores* option locked to a ratio multiplier of 4300 MHz.
-
+<br><br>
 ### Graphics Adapters
 
 - Intel UHD Graphics 630 (31.0.101.2140)
 - NVIDIA GeForce RTX 5060 Ti 8 GB (Studio Driver - WHQL 591.74)
 - AMD RX 6400 4 GB (Adrenalin 25.12.1 WHQL)
-
-#### DPC latency measurements *(Resplendence LatencyMon)*
+<br><br>
+### DPC latency measurements *(Resplendence LatencyMon)*
 
 Intel UHD graphics/AMD RX 6400 : ~5-10 with rare peaks of 50 microseconds
-NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent peaks of 160 microseconds
-**set to maximum power performance; Message Signaled Interrupts (MSI) automatically set for AMD and NVIDIA*
-
+NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent peaks of 160 microseconds\
+<sub>**set to maximum power performance; Message Signaled Interrupts (MSI) automatically set for AMD and NVIDIA*</sub>
+<br><br>
 ### Sound Cards
 
 - RME HDSPe AIO Pro PCIe 1.1 x1
 - RME Babyface Pro FS USB 2.0
 
-*For increased test coverage, AIO Pro was installed in both PCIe slots (x16 lane slot direct to CPU, and x1 slot to PCH) - no significant differences in performance were observed.*
-
-#### RME Settings
+<sub>*For increased test coverage, AIO Pro was installed in both PCIe slots (x16 lane slot direct to CPU, and x1 slot to PCH) - no significant differences in performance were observed.*</sub>
+<br><br>
+### RME Settings
 
 AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage
-Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
-*Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*
 
+Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
+
+AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage
+<br>
+Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
+
+AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage\
+Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
+
+AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage
+
+Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance
+
+<sub>*Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*</sub>
+<br><br>
 ### ASIO Buffer Size
 
 | Soundcard | Buffer size |
@@ -63,27 +73,27 @@ Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance
 |AIO Pro|32 samples|
 |Babyface Pro FS| 48 samples|
 
-*Tests were also run at a more level playing field of 64 samples, but results suggested differences are more pronounced at the lowest available buffer sizes.*
-
-![img](https://i.imgur.com/EDIo6UL.png)
-*Round-trip latency values reported by the driver for Babyface and AIO Pro, as shown in Live's preferences audio tab*
-
-![img](https://i.imgur.com/mvVLdv1.png)
-*32 & 64 samples round-trip latency values reported by oblique audio RLT utility for AIO Pro*
-
-![img](https://i.imgur.com/acJveV8.png)
-*48 & 64 samples round-trip latency values reported by oblique audio RLT utility for Babyface Pro FS*
-
+<sub>*Tests were also run at a more level playing field of 64 samples, but results suggested differences are more pronounced at the lowest available buffer sizes.*</sub>
+<br><br><br>
+![RTL_ableton](https://i.imgur.com/EDIo6UL.png)\
+<sub>*Round-trip latency values reported by the driver for Babyface and AIO Pro, as shown in Live's preferences audio tab*</sub>
+<br><br><br>
+![RTL_AIO](https://i.imgur.com/mvVLdv1.png)\
+<sub>*32 & 64 samples round-trip latency values reported by oblique audio RLT utility for AIO Pro*</sub>
+<br><br><br>
+![RTL_Babyface](https://i.imgur.com/acJveV8.png)\
+<sub>*48 & 64 samples round-trip latency values reported by oblique audio RLT utility for Babyface Pro FS*</sub>
+<br><br><br>
 Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds just a very small advantage at 64 samples, while Babyface's latency @48 samples falls approximately between the 32 and 64 sample values of the PCIe card.
 
 ## Testing Procedure
 
 - Single-Core load : A single audio track, progressively loaded with plug-in instances until audible dropouts occurred.
 - Balanced per-core load  : Same as previous, but with 4 and 8 tracks, to evenly allocate the load across the 4 active CPU cores.
-
+<br>
 ![img](https://i.imgur.com/S5Vznix.png) 
 *The 4-channel project in Ableton Live*
-
+<br>
 ## Results and Insights
 
 ### PCIe and USB 2.0
