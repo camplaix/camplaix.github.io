@@ -1,6 +1,5 @@
 # Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
-<img width="1600" height="331" alt="Ableton_panel" src="https://github.com/user-attachments/assets/d6082886-105a-4c85-b51e-6e7f35487a79" />
 
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
 <br><br>
@@ -16,7 +15,7 @@ Progressively load Ableton 12 audio track with an increasing number of plug-in i
 The test results are measured quantitatively, by the maximum number of plug-in instances possible at the edge of audible dropouts/glitching artifacts.
 Solely audio tracks - using a custom audio clip with staccato timing cues to allow the perceptual intelligibility of real-time audio engine dropouts (caused by the buffer processing time overtaking the time it takes to play it). The test plug-in used for this purpose effect was Live's built-in *Echo*. It provides a good balance between CPU load and granularity when adding up the effects count. The resulting audio was recorded externally into laptop connected to both interface outputs.
 <br><br><br>
-![Echo](https://i.imgur.com/4j6fJIA.png)\
+![Echo](images/Echo.png)\
 <sub>*Live's built-in Echo modulation delay effect*</sub>
 <br><br>
 ## Test System
@@ -61,13 +60,13 @@ Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance
 
 <sub>*Tests were also run at a more level playing field of 64 samples, but results suggested differences are more pronounced at the lowest available buffer sizes.*</sub>
 <br><br><br>
-![RTL_ableton](https://i.imgur.com/EDIo6UL.png)\
+![RTL_ableton](images/Ableton_panel.png)\
 <sub>*Round-trip latency values reported by the driver for Babyface and AIO Pro, as shown in Live's preferences audio tab*</sub>
 <br><br><br>
-![RTL_AIO](https://i.imgur.com/mvVLdv1.png)\
+![RTL_AIO](images/AIO_RTL.png)\
 <sub>*32 & 64 samples round-trip latency values reported by oblique audio RLT utility for AIO Pro*</sub>
 <br><br><br>
-![RTL_Babyface](https://i.imgur.com/acJveV8.png)\
+![RTL_Babyface](images/babyface_RTL.png)\
 <sub>*48 & 64 samples round-trip latency values reported by oblique audio RLT utility for Babyface Pro FS*</sub>
 <br><br>
 Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds just a very small advantage at 64 samples, while Babyface's latency @48 samples falls approximately between the 32 and 64 sample values of the PCIe card.
@@ -77,7 +76,7 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 - Single-Core load : A single audio track, progressively loaded with plug-in instances until audible dropouts occurred.
 - Balanced per-core load  : Same as previous, but with 4 and 8 tracks, to evenly allocate the load across the 4 active CPU cores.
 <br><br><br>
-![img](https://i.imgur.com/S5Vznix.png)\
+![img](images/Ableton_project.png)\
 <sub>*The 4-channel project in Ableton Live*</sub>
 <br><br>
 ## Results and Insights
@@ -88,7 +87,7 @@ Using the AMD graphics card as reference - The PCIe AIO Pro allowed dropout-free
 
 As side note, setting Ableton process affinity to exclude CPU 0 has positive effects on the single channel test, possibly leaving the software free from the core where most interrupts are registered. Detrimental effects were seen for the remaining tests, where all cores are fully utilized - because there would be one fewer processor to distribute the processing load.
 <br><br>
-![img](https://i.imgur.com/mcKCaCA.png)\
+![img](images/PluginInstances.png)\
 <sub>*Total number of plug-in instances across the three projects*</sub>
 <br><br>
 1 channel\
@@ -105,10 +104,10 @@ As side note, setting Ableton process affinity to exclude CPU 0 has positive eff
 <br><br>
 When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a ![u]broad range![/u] - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
 <br><br>
-![img](https://i.imgur.com/L9BQDzw.png)\
+![img](images/Four_loaded_cores_Babyface.png)\
 <sub>*% CPU utilization in Task Manager running the 8 channel project in Ableton Live, with Babyface Pro FS USB 2.0*</sub>
 <br><br>
-![img](https://i.imgur.com/QqVD2b4.png)\
+![img](images/Four_loaded_cores.png)\
 <sub>*% CPU utilization in Task Manager running the 8 channel project in Ableton Live, with HDSPe AIO Pro PCIe*</sub>
 <br><br>
 Looking up at both images, we can infer that the PCIe interface enables a greater maximum potential utilization of the CPU, when compared to the USB 2.0 RME Babyface Pro FS.
@@ -155,10 +154,10 @@ With the PCIe card, generated dropout artifacts have a less obvious character to
 
 An additional experiment with the Babyface FS Pro to verify possible performance enhancement related to CPU core affinity. Using the AMD adapter as graphics reference to minimize bottlenecks, this investigation is most relevant in the 4 and 8-channel projects, where all cores are fully utilized. This brief test consisted in increasing the number of active CPUs to 5 physical cores, from the previous 4, and exclude Ableton process from CPU 0 by setting its core affinity to the other remaining cores. The plug-in CPU load remains equally distributed across the previous four active cores, with an additional undisturbed core (*CPU 0*), except for the background processes and DPC interrupts.
 <br><br>
-![img](https://i.imgur.com/af0WGy9.png)\
+![img](images/Affinity_selection.png)\
 <sub>*Processor affinity setting excluding ```CPU 0```*</sub>
 <br><br><br>
-![img](https://i.imgur.com/iYnPbFq.png)\
+![img](images/Affinity_5Cores.png)\
 <sub>*```CPU 0``` unassigned, and the remaining 4 loaded cores in display*</sub>
 <br><br>
 The results were surprising here. Limiting the analysis to Babyface Pro FS, it was possible to ascertain complete dropout-free playback at the plug-in count described above, where artifacts were previously audible.
