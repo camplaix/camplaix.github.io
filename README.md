@@ -1,4 +1,4 @@
-# Ableton Live 12
+<img width="1144" height="497" alt="image" src="https://github.com/user-attachments/assets/bf337483-df2a-4ff5-b3b4-aa98c7b43eda" /># Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
@@ -113,62 +113,62 @@ When listening audio clips, recall they were recorded at the plug-in instance co
 Looking up at both images, we can infer that the PCIe interface enables a greater maximum potential utilization of the CPU, when compared to the USB 2.0 RME Babyface Pro FS.
 <br><br>
 ### Graphics Cards
-<br><br>
+
 #### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 
-1 channel
-https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3ODdf/1%20channel%20Babyface%20intel%20HD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3ODhf/1%20channel%20Babyface%20NVIDIA.mp3!
+1 channel\
+[Babyface AMD](https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3)\
+[Babyface Intel HD](https://od.lk/s/NDlfMzg5NjQ3ODdf/1%20channel%20Babyface%20intel%20HD.mp3)\
+[Babyface NVIDIA](https://od.lk/s/NDlfMzg5NjQ3ODhf/1%20channel%20Babyface%20NVIDIA.mp3)
 
-4 channels
-https://od.lk/s/NDlfMzg5NjQ3OTFf/4%20channel%20Babyface%20AMD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3OTJf/4%20channel%20Babyface%20intel%20HD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3ODhf/1%20channel%20Babyface%20NVIDIA.mp3!
+4 channels\
+[Babyface AMD](https://od.lk/s/NDlfMzg5NjQ3OTFf/4%20channel%20Babyface%20AMD.mp3)\
+[Babyface Intel HD](https://od.lk/s/NDlfMzg5NjQ3OTJf/4%20channel%20Babyface%20intel%20HD.mp3)\
+[Babyface NVIDIA](https://od.lk/s/NDlfMzg5NjQ3ODhf/1%20channel%20Babyface%20NVIDIA.mp3)
 
-8 channels
-https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3OTdf/8%20channel%20Babyface%20intel%20HD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3OThf/8%20channel%20Babyface%20NVIDIA.mp3!
+8 channels\
+[Babyface AMD](https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3)\
+[Babyface Intel HD](https://od.lk/s/NDlfMzg5NjQ3OTdf/8%20channel%20Babyface%20intel%20HD.mp3)\
+[Babyface NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OThf/8%20channel%20Babyface%20NVIDIA.mp3)
 
 Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
 AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
-<br><br>
+
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
 
-1 channel
-https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3!
-https://od.lk/s/NDlfMzg5NjQ4MDBf/1%20channel%20AIO%20NVIDIA.mp3!
+1 channel\
+[HDSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3)\
+[HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ4MDBf/1%20channel%20AIO%20NVIDIA.mp3)
 
-4 channels
-https://od.lk/s/NDlfMzg5NjQ3ODlf/4%20channel%20AIO%20AMD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3OTBf/4%20channel%20AIO%20NVIDIA.mp3!
+4 channels\
+[HSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3ODlf/4%20channel%20AIO%20AMD.mp3)\
+[HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OTBf/4%20channel%20AIO%20NVIDIA.mp3!)
 
-8 channels
-https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3!
-https://od.lk/s/NDlfMzg5NjQ3OTVf/8%20channel%20AIO%20NVIDIA.mp3!
+8 channels\
+[[HDSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3!)\
+[HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OTVf/8%20channel%20AIO%20NVIDIA.mp3!)
 
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 <br><br>
 ## Excluding *Core 0* in Ableton Live with CPU affinity
 
 An additional experiment with the Babyface FS Pro to verify possible performance enhancement related to CPU core affinity. Using the AMD adapter as graphics reference to minimize bottlenecks, this investigation is most relevant in the 4 and 8-channel projects, where all cores are fully utilized. This brief test consisted in increasing the number of active CPUs to 5 physical cores, from the previous 4, and exclude Ableton process from CPU 0 by setting its core affinity to the other remaining cores. The plug-in CPU load remains equally distributed across the previous four active cores, with an additional undisturbed core (*CPU 0*), except for the background processes and DPC interrupts.
-
-![img](https://i.imgur.com/af0WGy9.png) 
-*Processor affinity setting excluding CPU 0/*
-
-![img](https://i.imgur.com/iYnPbFq.png)
-*CPU 0 unassigned, and the remaining 4 loaded cores in display*
-
+<br><br>
+![img](https://i.imgur.com/af0WGy9.png)\
+<sub>*Processor affinity setting excluding ```CPU 0```*</sub>
+<br><br>
+![img](https://i.imgur.com/iYnPbFq.png)\
+<sub>*```CPU 0``` unassigned, and the remaining 4 loaded cores in display*</sub>
+<br><br>
 The results were surprising here. Limiting the analysis to Babyface Pro FS, it was possible to ascertain complete dropout-free playback at the plug-in count described above, where artifacts were previously audible.
 
-4-channel (Babyface Pro FS & AMD graphics)
-4 active cores https://od.lk/s/NDlfMzg5NjU1Njhf/4%20channel%204%20cores.mp3!
-5 active Cores excluding Ableton from CPU 0 https://od.lk/s/NDlfMzg5NjU1NjVf/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3!
+4-channel (Babyface Pro FS & AMD graphics)\
+[4 active cores](https://od.lk/s/NDlfMzg5NjU1Njhf/4%20channel%204%20cores.mp3)\
+[5 active Cores excluding Ableton from CPU 0](https://od.lk/s/NDlfMzg5NjU1NjVf/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3)
 
-8-channel (Babyface Pro FS & AMD graphics)
-4 active cores https://od.lk/s/NDlfMzg5NjU1NjZf/8%20channel%20%204%20cores.mp3!
-5 active cores excluding Ableton from CPU 0 https://od.lk/s/NDlfMzg5NjU1Njdf/8%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3!
+8-channel (Babyface Pro FS & AMD graphics)\
+[4 active cores](https://od.lk/s/NDlfMzg5NjU1NjZf/8%20channel%20%204%20cores.mp3)\
+[5 active cores excluding Ableton from CPU 0](https://od.lk/s/NDlfMzg5NjU1Njdf/8%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3)
 <br><br>
 ## Ableton Configuration Options
 
@@ -180,17 +180,17 @@ The *Options.txt* file can enable a few experimental and unsupported features in
 
 As some of you may know, the Multimedia Class Scheduler service (MMCSS) *enables multimedia applications to ensure that their time-sensitive processing receives prioritized access to CPU resources. This service enables multimedia applications to utilize as much of the CPU as possible without denying CPU resources to lower-priority applications.* It was introduced in Windows Vista with the help of Mark Russinovich windows internals team, with the help of improving real-time thread priorization - improving from its predecessor, Windows XP. It has been a highly disputed feature since it works in some DAWs, while it can hinder performance in others. RME and Antelope enable setting the ASIO driver MMCSS service subscription through a flag. It used to be the case that Ableton overrided MMCSS thread prioritization - but such practice doesn't happen anymore since a specific Ableton Live version.
 
-
 As some of you may know, the Multimedia Class Scheduler service (MMCSS) *enables multimedia applications to ensure that their time-sensitive processing receives prioritized access to CPU resources. This service enables multimedia applications to utilize as much of the CPU as possible without denying CPU resources to lower-priority applications.* It was introduced in Windows Vista with the help of Mark Russinovich windows internals team, with the help of improving real-time thread priorization - improving from its predecessor, Windows XP. It has been a highly disputed feature since it works in some DAWs, while it can hinder performance in others. RME and Antelope enable setting the ASIO driver MMCSS service subscription through a flag. It used to be the case that Ableton overrided MMCSS thread prioritization - but such practice doesn't happen anymore since a specific Ableton Live version.
-https://learn.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service!
-
-Location : *Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\*
-*%SystemRoot%\System32\Drivers\MMCSS.sys*
-
+[Microsoft on Multimedia Class Scheduler Service](https://learn.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service)
+<br><br>
+```Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia```\
+```%SystemRoot%\System32\Drivers\MMCSS.sys```
+<br><br>
 MMCSS service in requires a restart after registry changes (use CMD):
-*sc start MMCSS
-sc stop MMCSS*
 
+```sc start MMCSS```\
+```sc stop MMCSS```
+<br><br>
 To confirm the ASIO driver thread has subscribed to MMCSS, use Sysinternals *Process Explorer* and ensure the ASIO thread priority is raised from 15 to 26.
 
 In general, attempting to optimize MMCSS hidden registry flags showed a performance degradation, with reduced dropout resilience. In other cases there weren't audible differences.
