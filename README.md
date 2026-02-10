@@ -1,11 +1,6 @@
 # Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
-<video controls width="300" height="50">
-  <source src="/audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
-  Your browser does not support the video tag.
-</video>
-
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
 <br><br>
 For the past few weeks, I've been running some benchmarks in Ableton Live 12, using two RME interfaces and three graphics cards to evaluate and measure potential differences in performance of PCIe, USB, and the graphics adapter impact, in a low-latency, high CPU load context.
@@ -95,17 +90,46 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 ![img](images/PluginInstances.png)\
 <sub>*Total number of plug-in instances across the three projects*</sub>
 <br><br>
+
 1 channel
-> [Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3)\
-> [HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3)
+Babyface
+<video controls width="300" height="50">
+  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+
+HDSPe AIO Pro
+<video controls width="300" height="50">
+  <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+
 
 4 channels
-> [Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ3OTFf/4%20channel%20Babyface%20AMD.mp3)\
-> [HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3)
+Babyface
+<video controls width="300" height="50">
+  <source src="audio/4%20channel%20Babyface%20AMD" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+
+HDSPe AIO Pro
+<video controls width="300" height="50">
+  <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
 
 8 channels
-> [Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3)\
-> [HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3)
+Babyface
+<video controls width="300" height="50">
+  <source src="audio/8%20channel%20Babyface%20AMD" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+
+HDSPe AIO Pro
+<video controls width="300" height="50">
+  <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
 
 When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a <ins>broad range</ins> - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
 <br><br>
