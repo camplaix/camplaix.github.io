@@ -227,30 +227,24 @@ NVIDIA
 <br><br>
 4 channels
 
-AMD
-<video controls width="300" height="50">
+AMD <video controls width="300" height="50">
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-NVIDIA
-<video controls width="300" height="50">
+NVIDIA <video controls width="300" height="50">
     <source src="audio/4%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-> [HSPe AIO Pro & AMD](https://od.lk/s/NDlfMzg5NjQ3ODlf/4%20channel%20AIO%20AMD.mp3)\
-> [HDSPe AIO Pro & NVIDIA](https://od.lk/s/NDlfMzg5NjQ3OTBf/4%20channel%20AIO%20NVIDIA.mp3!)
 <br><br>
 8 channels
 
-AMD
-<video controls width="300" height="50">
+AMD <video controls width="300" height="50">
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-NVIDIA
-<video controls width="300" height="50">
+NVIDIA <video controls width="300" height="50">
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
@@ -289,7 +283,7 @@ Babyface Pro FS & AMD graphics
 
 4 active cores
 <video controls width="300" height="50">
-    <source src="audio/8%20channel%20%204%20cores.mp3" type="audio/mpeg">
+    <source src="audio/8%20channel%204%20cores.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
