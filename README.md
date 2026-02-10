@@ -1,12 +1,9 @@
-# Ableton Live 12
+<img width="518" height="437" alt="image" src="https://github.com/user-attachments/assets/c5c351ad-dccd-49ac-8166-5103f52b3af9" /># Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance in a high CPU load context
 
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
 <br><br>
-Hello,
-
 For the past few weeks, I've been running some benchmarks in Ableton Live 12, using two RME interfaces and three graphics cards to evaluate and measure potential differences in performance of PCIe, USB, and the graphics adapter impact, in a low-latency, high CPU load context.
-<br><br>
 
 ## Test Objective
 Assess low-latency performance at high CPU load in Ableton Live 12 and Windows 11 25H2
@@ -49,21 +46,8 @@ NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent
 <br><br>
 ### RME Settings
 
-AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage
-
-Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
-
-AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage
-<br>
-Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
-
 AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage\
-Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance 
-
-AIO Pro : *Optimize Multi-Client Mixing* disabled to maximize CPU usage
-
-Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance
-
+Babyface Pro FS / AIO Pro : *MMCSS* enabled as it displayed superior performance\
 <sub>*Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*</sub>
 <br><br>
 ### ASIO Buffer Size
@@ -90,10 +74,10 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 
 - Single-Core load : A single audio track, progressively loaded with plug-in instances until audible dropouts occurred.
 - Balanced per-core load  : Same as previous, but with 4 and 8 tracks, to evenly allocate the load across the 4 active CPU cores.
-<br>
-![img](https://i.imgur.com/S5Vznix.png) 
-*The 4-channel project in Ableton Live*
-<br>
+<br><br><br>
+![img](https://i.imgur.com/S5Vznix.png)\
+<sub>*The 4-channel project in Ableton Live*</sub>
+<br><br><br>
 ## Results and Insights
 
 ### PCIe and USB 2.0
@@ -106,21 +90,20 @@ As side note, setting Ableton process affinity to exclude CPU 0 has positive eff
 *Total number of plug-in instances across the three projects*
 
 1 channel
-[Babyface PRO FS & AMD](https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3)
-<audio controls>
-  <source src="https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-</audio>
 
-Babyface Pro FS https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3
-HDSPe AIO Pro   https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3
+[Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ4MDFf/1%20channel%20Babyface%20AMD.mp3)
+
+[HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTlf/1%20channel%20AIO%20AMD.mp3)
 
 4 channels
-Babyface Pro FS https://od.lk/s/NDlfMzg5NjQ3OTFf/4%20channel%20Babyface%20AMD.mp3
-HDSPe AIO Pro   https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3
 
-8 channels
-Babyface Pro FS https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3
-HDSPe AIO Pro   https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3
+[Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ3OTFf/4%20channel%20Babyface%20AMD.mp3)
+
+[HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3)
+
+8 channels\
+[Babyface Pro FS](https://od.lk/s/NDlfMzg5NjQ3OTZf/8%20channel%20Babyface%20AMD.mp3)\
+[HDSPe AIO Pro](https://od.lk/s/NDlfMzg5NjQ3OTRf/8%20channel%20AIO%20AMD.mp3)
 
 When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a ![u]broad range![/u] - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
 
