@@ -156,17 +156,19 @@ An additional experiment with the Babyface FS Pro to verify possible performance
 <br><br>
 ![img](https://i.imgur.com/af0WGy9.png)\
 <sub>*Processor affinity setting excluding ```CPU 0```*</sub>
-<br><br>
+<br><br><br>
 ![img](https://i.imgur.com/iYnPbFq.png)\
 <sub>*```CPU 0``` unassigned, and the remaining 4 loaded cores in display*</sub>
 <br><br>
 The results were surprising here. Limiting the analysis to Babyface Pro FS, it was possible to ascertain complete dropout-free playback at the plug-in count described above, where artifacts were previously audible.
 
-4-channel (Babyface Pro FS & AMD graphics)\
+Babyface Pro FS & AMD graphics
+
+4-channel\
 [4 active cores](https://od.lk/s/NDlfMzg5NjU1Njhf/4%20channel%204%20cores.mp3)\
 [5 active Cores excluding Ableton from CPU 0](https://od.lk/s/NDlfMzg5NjU1NjVf/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3)
 
-8-channel (Babyface Pro FS & AMD graphics)\
+8-channel\
 [4 active cores](https://od.lk/s/NDlfMzg5NjU1NjZf/8%20channel%20%204%20cores.mp3)\
 [5 active cores excluding Ableton from CPU 0](https://od.lk/s/NDlfMzg5NjU1Njdf/8%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3)
 <br><br>
@@ -194,15 +196,16 @@ MMCSS service in requires a restart after registry changes (use CMD):
 To confirm the ASIO driver thread has subscribed to MMCSS, use Sysinternals *Process Explorer* and ensure the ASIO thread priority is raised from 15 to 26.
 
 In general, attempting to optimize MMCSS hidden registry flags showed a performance degradation, with reduced dropout resilience. In other cases there weren't audible differences.
-
+<br><br>
 List of attempted changes:
 
-```NoLazyMode = 1``` - increased artifacts *(disables IdleDetection routine)* 
-```LazyModeTimeout < 1000000 ```(100 ms) from the max. default value - increased artifacts
-```IdleDetectionCycles" = 2```  values of 1..31 other than the default 2 - no audible improvement
-Restricting ```affinity``` mask in ```Pro Audio``` task to fewer CPU cores - increased artifacts
-```SystemResponsiveness = 10``` - no audible improvements *(by default, this is 20 percent; MMCSS monitors CPU usage to ensure that multimedia threads aren’t boosted for more than 8 ms over a 10 ms period if required by lower priority applications)*
-
-Some useful links for a deeper dive in the MMCSS system service:
-https://github.com/nohuto/win-config/blob/main/system/desc.md#mmcss-values!
-https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES!
+```NoLazyMode = 1``` - increased artifacts *(disables IdleDetection routine)* \
+```LazyModeTimeout < 1000000 ```(100 ms) from the max. default value - increased artifacts\
+```IdleDetectionCycles" = 2```  values of 1..31 other than the default 2 - no audible improvement\
+```affinity``` mask in ```Pro Audio``` task to fewer CPU cores - increased artifacts\
+```SystemResponsiveness = 10``` - no audible improvements\
+<sub>*by default, this is 20 percent; MMCSS monitors CPU usage to ensure that multimedia threads aren’t boosted for more than 8 ms over a 10 ms period if required by lower priority applications*</sub>
+<br><br>
+Some useful links for a deeper dive in the MMCSS system service:\
+[github.com/nohuto](https://github.com/nohuto/win-config/blob/main/system/desc.md#mmcss-values)\
+[github.com/djdallmann](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES)
