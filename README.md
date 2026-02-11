@@ -37,7 +37,7 @@ The CPU configuration was modified for easier analysis - restricting the active 
 
 <sub>**set to maximum power performance; Message Signaled Interrupts (MSI) automatically set for AMD and NVIDIA*</sub>
 
-Readings were made over 60-second interval.
+Readings were made over a 60-second interval.
 
 ### Sound Cards
 
