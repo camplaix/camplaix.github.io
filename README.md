@@ -338,7 +338,7 @@ In general, attempting to optimize MMCSS hidden registry flags showed a performa
 
 List of attempted changes:
 
-`NoLazyMode = 1` - increased artifacts *(disables IdleDetection routine)* \
+`NoLazyMode = 1` - increased artifacts (disables `IdleDetection` routine)\
 `LazyModeTimeout < 1000000`(100 ms) from the max. default value - increased artifacts\
 `IdleDetectionCycles" = 2`  values of 1..31 other than the default 2 - no audible improvement\
 `affinity` mask in `Pro Audio` task to fewer CPU cores - increased artifacts\
