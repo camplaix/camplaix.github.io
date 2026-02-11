@@ -140,12 +140,11 @@ When listening audio clips, recall they were recorded at the plug-in instance co
 Looking up at both images, we can infer that the PCIe interface enables a greater maximum potential utilization of the CPU, when compared to the USB 2.0 RME Babyface Pro FS.
 <br><br>
 ### Graphics Cards
-
+<br><br>
 Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
 AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
-
-#### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 <br><br>
+### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 
 **1 channel**
 
@@ -210,9 +209,8 @@ intel UHD
 </video>
 <br>
 
-#### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
+### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
 <br><br>
-
 **1 channel**
 
 AMD
