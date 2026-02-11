@@ -28,6 +28,7 @@ The CPU configuration was modified for easier analysis - restricting the active 
 - NVIDIA GeForce RTX 5060 Ti 8 GB `Studio Driver - WHQL 591.74`
 - AMD RX 6400 4 GB `Adrenalin 25.12.1 WHQL`
 <br><br>
+
 ### DPC latency measurements
 
 Intel UHD graphics/AMD RX 6400 : ~5-10 with rare peaks of 50 microseconds\
@@ -76,7 +77,8 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 <br><br><br>
 ![img](images/Ableton_project.png)\
 <sub>*The 4-channel project in Ableton Live*</sub>
-<br><br>
+<br>
+
 ## Results and Insights
 
 ### PCIe and USB 2.0
@@ -273,7 +275,7 @@ An additional experiment with the Babyface FS Pro to verify possible performance
 <sub>*`CPU 0` unassigned, and the remaining 4 loaded cores in display*</sub>
 <br><br>
 The results were surprising here. Limiting the analysis to Babyface Pro FS, it was possible to ascertain complete dropout-free playback at the plug-in count described above, where artifacts were previously audible.
-
+<br><br>
 Babyface Pro FS & AMD graphics
 
 **4-channel**
