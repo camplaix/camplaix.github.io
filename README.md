@@ -1,14 +1,6 @@
 # Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance
 
-<audio controls>
-  <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
-</audio>
-
-<audio controls>
-  <source src="https://github.com/camplaix/camplaix.github.io/blob/main/audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
-</audio>
-
 <sub>*Disclaimer : Computer audio low-latency load testing is a context-sensitive activity, with significant variability in real-time performance - influenced by the version of the operating system and of the device drivers installed. These tests comprise a specific set of configurations that originate the findings shared in this post.*</sub>
 
 ## Test Objective
@@ -103,7 +95,21 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 #### 1 channel
 
 Babyface
+<audio controls>
+  <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
+</audio>
+
 <video controls width="300" height="50">
+  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+
+<video controls width="400" height="20">
+  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+  Your browser does not support the tag.
+</video>
+
+<video controls width="500" height="30">
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
