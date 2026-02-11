@@ -91,12 +91,14 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 
 **1 channel**
 
-Babyface<video controls width="300" height="50">
+Babyface
+<video controls width="300" height="50">
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-HDSPe AIO Pro<video controls width="300" height="50">
+HDSPe AIO Pro
+<video controls width="300" height="50">
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
@@ -104,12 +106,14 @@ HDSPe AIO Pro<video controls width="300" height="50">
 
 **4 channels**
 
-Babyface<video controls width="300" height="50">
+Babyface
+<video controls width="300" height="50">
   <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-HDSPe AIO Pro<video controls width="300" height="50">
+HDSPe AIO Pro
+<video controls width="300" height="50">
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
