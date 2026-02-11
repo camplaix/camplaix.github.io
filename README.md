@@ -343,6 +343,6 @@ List of attempted changes:
 `SystemResponsiveness = 10` - no audible improvements\
 <sub>*by default, this is 20 percent; MMCSS monitors CPU usage to ensure that multimedia threads aren’t boosted for more than 8 ms over a 10 ms period if required by lower priority applications*</sub>
 
-Some useful links for a deeper dive in the MMCSS system service:\
+Some useful links for a deeper dive in the MMCSS system service:
 >[github.com/nohuto](https://github.com/nohuto/win-config/blob/main/system/desc.md#mmcss-values)\
 >[github.com/djdallmann](https://github.com/djdallmann/GamingPCSetup/tree/master/CONTENT/RESEARCH/WINSERVICES)
