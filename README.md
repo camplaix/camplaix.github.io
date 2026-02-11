@@ -142,6 +142,7 @@ Looking up at both images, we can infer that the PCIe interface enables a greate
 ### Graphics Cards
 
 #### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
+<br><br>
 
 **1 channel**
 
@@ -186,6 +187,7 @@ intel UHD
 <br><br>
 
 **8-channel**
+
 AMD
 <video controls width="300" height="50">
   <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
@@ -203,11 +205,12 @@ intel UHD
   <source src="audio/8%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-
+<br>
 Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
 AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
 
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
+<br><br>
 
 **1 channel**
 
@@ -223,14 +226,17 @@ NVIDIA
   Your browser does not support the tag.
 </video>
 <br><br>
-4 channels
 
-AMD <video controls width="300" height="50">
+**4 channels**
+
+AMD 
+<video controls width="300" height="50">
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-NVIDIA <video controls width="300" height="50">
+NVIDIA 
+<video controls width="300" height="50">
     <source src="audio/4%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
@@ -243,11 +249,13 @@ AMD <video controls width="300" height="50">
   Your browser does not support the tag.
 </video>
 <br>
-NVIDIA <video controls width="300" height="50">
+NVIDIA 
+<video controls width="300" height="50">
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br><br>
+
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 <br><br>
 ## Excluding *Core 0* in Ableton Live with CPU affinity
