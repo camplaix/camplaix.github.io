@@ -247,7 +247,8 @@ NVIDIA
 
 **8 channels**
 
-AMD <video controls width="300" height="50">
+AMD 
+<video controls width="300" height="50">
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
