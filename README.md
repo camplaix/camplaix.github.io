@@ -5,7 +5,7 @@
 
 ## Test Objective
 Assess low-latency performance at high CPU load in Ableton Live 12 and Windows 11 25H2
-- AMD vs NVIDIA vs Intel UHD integrated graphics
+- AMD vs NVIDIA vs Intel UHD Graphics
 - PCIe vs USB 2.0
 
 ## Test Methodology
@@ -30,8 +30,10 @@ The CPU configuration was modified for easier analysis - restricting the active 
 
 ### DPC latency measurements
 
-Intel UHD graphics/AMD RX 6400 : ~5-10 with rare peaks of 50 microseconds\
-NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent peaks of 160 microseconds
+| Adapter | Latency range | Max. latency |
+|---:|---:|---:|
+|Intel UHD 630/AMD RX 6400|5-10 μs|20 μs|
+|NVIDIA 5060 Ti| 5-150 μs|160 μs|
 
 <sub>**set to maximum power performance; Message Signaled Interrupts (MSI) automatically set for AMD and NVIDIA*</sub>
 
@@ -249,6 +251,7 @@ NVIDIA
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
+<br>
 
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 
