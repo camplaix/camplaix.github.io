@@ -1,14 +1,3 @@
-<script>
-document.addEventListener('play', function(e){  
-    var videos = document.getElementsByTagName('video');  
-    for(var i = 0, len = videos.length; i < len;i++){  
-        if(videos[i] != e.target){  
-            videos[i].pause();  
-        }  
-    }  
-}, true);
-</script>
-
 # Ableton Live 12
 # RME PCIe, USB and Graphics low-latency performance
 
@@ -91,6 +80,7 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 ![img](images/Ableton_project.png)\
 <sub>*The 4-channel project in Ableton Live*</sub>
 <br><br>
+
 ## Results and Insights
 
 ### PCIe and USB 2.0
@@ -115,7 +105,6 @@ HDSPe AIO Pro
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 #### 4 channels
 
@@ -130,7 +119,6 @@ HDSPe AIO Pro
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 #### 8 channels
 
@@ -183,7 +171,6 @@ intel UHD
   <source src="audio/1%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 ##### 4-channel
 
@@ -204,7 +191,6 @@ intel UHD
   <source src="audio/4%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 ##### 8-channel
 
@@ -242,7 +228,6 @@ NVIDIA
     <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 ##### 4 channels
 
@@ -257,7 +242,6 @@ NVIDIA
     <source src="audio/4%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 ##### 8 channels
 
@@ -272,7 +256,6 @@ NVIDIA
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 
@@ -306,7 +289,6 @@ The results were surprising here. Limiting the analysis to Babyface Pro FS, it w
     <source src="audio/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
-<br><br>
 
 ##### 8-channel
 
