@@ -141,6 +141,9 @@ Looking up at both images, we can infer that the PCIe interface enables a greate
 <br><br>
 ### Graphics Cards
 
+Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
+AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
+
 #### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 <br><br>
 
@@ -206,8 +209,6 @@ intel UHD
   Your browser does not support the tag.
 </video>
 <br>
-Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
-AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
 
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
 <br><br>
