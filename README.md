@@ -57,8 +57,8 @@ The CPU configuration was modified for easier analysis - restricting the active 
 
 | Soundcard | Buffer size |
 |---:|---:|
-|AIO Pro|32 samples|
-|Babyface Pro FS| 48 samples|
+|RME HDSPe AIO Pro|32 samples|
+|RME Babyface Pro FS|48 samples|
 
 <sub>*Tests were also run at a more level playing field of 64 samples, but results suggested differences are more pronounced at the lowest available buffer sizes.*</sub>
 
