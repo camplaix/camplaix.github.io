@@ -27,7 +27,7 @@ The CPU configuration was modified for easier analysis - restricting the active 
 - Intel UHD Graphics 630 `31.0.101.2140`
 - NVIDIA GeForce RTX 5060 Ti 8 GB `Studio Driver - WHQL 591.74`
 - AMD RX 6400 4 GB `Adrenalin 25.12.1 WHQL`
-<br><br>
+<br>
 
 ### DPC latency measurements
 
@@ -35,21 +35,24 @@ Intel UHD graphics/AMD RX 6400 : ~5-10 with rare peaks of 50 microseconds\
 NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent peaks of 160 microseconds
 
 <sub>**set to maximum power performance; Message Signaled Interrupts (MSI) automatically set for AMD and NVIDIA*</sub>
-<br><br>
+<br>
+
 ### Sound Cards
 
 * RME HDSPe AIO Pro PCIe 1.1 x1
 * RME Babyface Pro FS USB 2.0
 
 <sub>*For increased test coverage, AIO Pro was installed in both PCIe slots (x16 lane slot direct to CPU, and x1 slot to PCH) - no significant differences in performance were observed.*</sub>
-<br><br>
+<br>
+
 ### RME Settings
 
 * `Optimize Multi-Client Mixing` disabled to maximize CPU usage
 * `MMCSS` enabled as it displayed superior performance
 
 <sub>*Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*</sub>
-<br><br>
+<br>
+
 ### ASIO Buffer Size
 
 | Soundcard | Buffer size |
@@ -69,7 +72,8 @@ NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent
 <sub>*48 & 64 samples round-trip latency values reported by oblique audio RLT utility for Babyface Pro FS*</sub>
 <br><br>
 Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds just a very small advantage at 64 samples, while Babyface's latency @48 samples falls approximately between the 32 and 64 sample values of the PCIe card.
-<br><br>
+<br>
+
 ## Testing Procedure
 
 - Single-Core load : A single audio track, progressively loaded with plug-in instances until audible dropouts occurred.
@@ -150,7 +154,7 @@ Looking up at both images, we can infer that the PCIe interface enables a greate
 Babyface Pro FS appeared to be less resilient to graphics card interchange, with remarkably worse performance using Intel HD integrated graphics and NVIDIA. Possible causes for Intel UHD include system resource RAM sharing that starves the bandwidth at very high loads. This could be further confirmed by minimizing Ableton Live window, resulting in a reduction of dropout artifacts, probably causing a decreased graphical usage. Regarding the NVIDIA card, issues are likely caused by the worse DPC latency, as a consequece of prolonged interrupts occupying precious CPU cycles. 
 AMD was the top performer with the audio evidence revealing fewest audible dropouts at an equivalent plug-in count. 
 <br><br>
-### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
+#### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 
 **1 channel**
 
@@ -215,8 +219,8 @@ intel UHD
 </video>
 <br>
 
-### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
-<br><br>
+#### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
+
 **1 channel**
 
 AMD
