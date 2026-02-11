@@ -99,27 +99,6 @@ Babyface
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
 </audio>
 
-<audio controls height="50">
-<source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-</audio>
-
-<audio controls height="40">
-<source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-</audio>
-
-<audio controls height="30">
-<source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-</audio>
-
-<audio controls width="500" height="30">
-  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-</audio>
-
-<audio controls width="500" height="30">
-  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-  Your browser does not support the tag.
-</audio>
-<br>
 HDSPe AIO Pro
 <audio controls>
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
