@@ -63,14 +63,17 @@ NVIDIA GeForce RTX 5060 Ti : Higher baseline variability of ~5-150 with frequent
 ![RTL_ableton](images/Ableton_panel.png)\
 <sub>*Round-trip latency values reported by the driver for Babyface and AIO Pro, as shown in Live's preferences audio tab*</sub>
 <br><br>
+
 ![RTL_AIO](images/AIO_RTL.png)\
 <sub>*32 & 64 samples round-trip latency values reported by oblique audio RLT utility for AIO Pro*</sub>
 <br><br>
+
 ![RTL_Babyface](images/babyface_RTL.png)\
 <sub>*48 & 64 samples round-trip latency values reported by oblique audio RLT utility for Babyface Pro FS*</sub>
 <br><br>
+
 Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds just a very small advantage at 64 samples, while Babyface's latency @48 samples falls approximately between the 32 and 64 sample values of the PCIe card.
-<br>
+<br><br>
 
 ## Testing Procedure
 
@@ -100,7 +103,6 @@ Babyface
 <audio controls>
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
 </audio>
-
 HDSPe AIO Pro
 <audio controls>
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
@@ -114,7 +116,6 @@ Babyface
   <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 HDSPe AIO Pro
 <audio controls>
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
@@ -128,7 +129,6 @@ Babyface
   <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 HDSPe AIO Pro
 <audio controls>
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
