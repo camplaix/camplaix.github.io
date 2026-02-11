@@ -7,7 +7,7 @@
 Assess low-latency performance at high CPU load in Ableton Live 12 and Windows 11 25H2
 - AMD vs NVIDIA vs Intel UHD integrated graphics
 - PCIe vs USB 2.0
-<br><br>
+
 ## Test Methodology
 Progressively load Ableton 12 audio track with an increasing number of plug-in instances.
 The test results are measured quantitatively, by the maximum number of plug-in instances possible at the edge of audible dropouts/glitching artifacts.
@@ -91,32 +91,30 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 
 **1 channel**
 
-Babyface
-<video controls width="300" height="50">
+Babyface<video controls width="300" height="50">
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-HDSPe AIO Pro
-<video controls width="300" height="50">
+HDSPe AIO Pro<video controls width="300" height="50">
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br><br>
+
 **4 channels**
 
-Babyface
-<video controls width="300" height="50">
+Babyface<video controls width="300" height="50">
   <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br>
-HDSPe AIO Pro
-<video controls width="300" height="50">
+HDSPe AIO Pro<video controls width="300" height="50">
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </video>
 <br><br>
+
 **8 channels**
 
 Babyface
@@ -165,6 +163,7 @@ intel UHD
   Your browser does not support the tag.
 </video>
 <br><br>
+
 **4-channel**
 
 AMD
@@ -185,6 +184,7 @@ intel UHD
   Your browser does not support the tag.
 </video>
 <br><br>
+
 **8-channel**
 AMD
 <video controls width="300" height="50">
@@ -235,6 +235,7 @@ NVIDIA <video controls width="300" height="50">
   Your browser does not support the tag.
 </video>
 <br><br>
+
 **8 channels**
 
 AMD <video controls width="300" height="50">
@@ -277,6 +278,7 @@ Babyface Pro FS & AMD graphics
   Your browser does not support the tag.
 </video>
 <br><br>
+
 **8-channel**
 
 4 active cores
