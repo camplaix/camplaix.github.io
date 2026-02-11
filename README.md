@@ -160,7 +160,6 @@ AMD
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 NVIDIA
 <audio controls>
     <source src="audio/1%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
@@ -180,13 +179,11 @@ AMD
   <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 NVIDIA
 <audio controls>
     <source src="audio/4%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 intel UHD
 <audio controls>
   <source src="audio/4%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
@@ -200,13 +197,11 @@ AMD
   <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 NVIDIA
 <audio controls>
     <source src="audio/8%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 intel UHD
 <audio controls>
   <source src="audio/8%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
@@ -223,7 +218,6 @@ AMD
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 NVIDIA
 <audio controls>
     <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
@@ -237,7 +231,6 @@ AMD
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 NVIDIA 
 <audio controls>
     <source src="audio/4%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
@@ -251,7 +244,6 @@ AMD
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
-<br>
 NVIDIA 
 <audio controls>
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
