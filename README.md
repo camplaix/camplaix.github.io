@@ -89,7 +89,7 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 <sub>*Total number of plug-in instances across the three projects*</sub>
 <br><br>
 
-1 channel
+**1 channel**
 
 Babyface
 <video controls width="300" height="50">
@@ -103,7 +103,7 @@ HDSPe AIO Pro
   Your browser does not support the tag.
 </video>
 <br><br>
-4 channels
+**4 channels**
 
 Babyface
 <video controls width="300" height="50">
@@ -117,7 +117,7 @@ HDSPe AIO Pro
   Your browser does not support the tag.
 </video>
 <br><br>
-8 channels
+**8 channels**
 
 Babyface
 <video controls width="300" height="50">
@@ -145,7 +145,7 @@ Looking up at both images, we can infer that the PCIe interface enables a greate
 
 #### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 
-1 channel
+**1 channel**
 
 AMD
 <video controls width="300" height="50">
@@ -165,7 +165,7 @@ intel UHD
   Your browser does not support the tag.
 </video>
 <br><br>
-4-channel
+**4-channel**
 
 AMD
 <video controls width="300" height="50">
@@ -185,7 +185,7 @@ intel UHD
   Your browser does not support the tag.
 </video>
 <br><br>
-8-channel
+**8-channel**
 AMD
 <video controls width="300" height="50">
   <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
@@ -209,7 +209,7 @@ AMD was the top performer with the audio evidence revealing fewest audible dropo
 
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
 
-1 channel
+**1 channel**
 
 AMD
 <video controls width="300" height="50">
@@ -235,7 +235,7 @@ NVIDIA <video controls width="300" height="50">
   Your browser does not support the tag.
 </video>
 <br><br>
-8 channels
+**8 channels**
 
 AMD <video controls width="300" height="50">
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
@@ -263,7 +263,7 @@ The results were surprising here. Limiting the analysis to Babyface Pro FS, it w
 
 Babyface Pro FS & AMD graphics
 
-4-channel
+**4-channel**
 
 4 active cores
 <video controls width="300" height="50">
@@ -277,7 +277,7 @@ Babyface Pro FS & AMD graphics
   Your browser does not support the tag.
 </video>
 <br><br>
-8-channel
+**8-channel**
 
 4 active cores
 <video controls width="300" height="50">
