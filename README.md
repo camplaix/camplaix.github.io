@@ -96,57 +96,63 @@ As side note, setting Ableton process affinity to exclude `CPU 0` has positive e
 
 Babyface
 <audio controls>
-  <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
+  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
 </audio>
 
-<video controls width="300" height="50">
-  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-  Your browser does not support the tag.
-</video>
+<audio controls height="50">
+<source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+</audio>
 
-<video controls width="400" height="20">
-  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
-  Your browser does not support the tag.
-</video>
+<audio controls height="40">
+<source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+</audio>
 
-<video controls width="500" height="30">
+<audio controls height="30">
+<source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls width="500" height="30">
+  <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls width="500" height="30">
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 HDSPe AIO Pro
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 #### 4 channels
 
 Babyface
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 HDSPe AIO Pro
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 #### 8 channels
 
 Babyface
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 HDSPe AIO Pro
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br><br>
 When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a <ins>broad range</ins> - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
 <br><br>
@@ -169,62 +175,62 @@ AMD was the top performer with the audio evidence revealing fewest audible dropo
 ##### 1 channel
 
 AMD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/1%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 NVIDIA
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/1%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 intel UHD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/1%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 ##### 4-channel
 
 AMD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/4%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 NVIDIA
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/4%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 intel UHD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/4%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 ##### 8-channel
 
 AMD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/8%20channel%20Babyface%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 NVIDIA
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/8%20channel%20Babyface%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 intel UHD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/8%20channel%20Babyface%20intel%20HD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
@@ -232,44 +238,44 @@ intel UHD
 ##### 1 channel
 
 AMD
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 NVIDIA
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/1%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 ##### 4 channels
 
 AMD 
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/4%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 NVIDIA 
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/4%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 ##### 8 channels
 
 AMD 
-<video controls width="300" height="50">
+<audio controls>
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 NVIDIA 
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 
@@ -293,30 +299,30 @@ The results were surprising here. Limiting the analysis to Babyface Pro FS, it w
 ##### 4-channel
 
 4 active cores
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/4%20channel%204%20cores.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 5 active Cores excluding Ableton from CPU 0
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/4%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 ##### 8-channel
 
 4 active cores
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/8%20channel%204%20cores.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 <br>
 5 active cores excluding Ableton from CPU 0
-<video controls width="300" height="50">
+<audio controls>
     <source src="audio/8%20channel%20Affinity%20-%205%20cores%20excluding%20CPU%200.mp3" type="audio/mpeg">
   Your browser does not support the tag.
-</video>
+</audio>
 
 ## Ableton Configuration Options
 
@@ -334,7 +340,7 @@ As some of you may know, the Multimedia Class Scheduler service (MMCSS) *enables
 
 As some of you may know, the Multimedia Class Scheduler service (MMCSS) *enables multimedia applications to ensure that their time-sensitive processing receives prioritized access to CPU resources. This service enables multimedia applications to utilize as much of the CPU as possible without denying CPU resources to lower-priority applications.* It was introduced in Windows Vista with the help of Mark Russinovich windows internals team, with the help of improving real-time thread priorization - improving from its predecessor, Windows XP. It has been a highly disputed feature since it works in some DAWs, while it can hinder performance in others. RME and Antelope enable setting the ASIO driver MMCSS service subscription through a flag. It used to be the case that Ableton overrided MMCSS thread prioritization - but such practice doesn't happen anymore since a specific Ableton Live version.
 
-[Microsoft on Multimedia Class Scheduler Service](https://learn.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service)
+>[Microsoft on Multimedia Class Scheduler Service](https://learn.microsoft.com/en-us/windows/win32/procthread/multimedia-class-scheduler-service)
 
 ```json
 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia
