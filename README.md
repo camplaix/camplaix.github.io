@@ -45,7 +45,6 @@ Readings were made over a 60-second interval.
 * RME Babyface Pro FS USB 2.0
 
 <sub>*For increased test coverage, AIO Pro was installed in both PCIe slots (x16 lane slot direct to CPU, and x1 slot to PCH) - no significant differences in performance were observed.*</sub>
-<br/>
 
 ### RME Settings
 
@@ -53,7 +52,6 @@ Readings were made over a 60-second interval.
 * `MMCSS` enabled as it displayed superior performance in certain contexts
 
 <sub>*Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*</sub>
-<br/>
 
 ### ASIO Buffer Size
 
@@ -87,7 +85,6 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 
 ![img](images/Ableton_project.png)\
 <sub>*The 4-channel project in Ableton Live*</sub>
-<br/><br/>
 
 ## Results and Insights
 
