@@ -107,6 +107,7 @@ HDSPe AIO Pro
   <source src="audio/1%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
+<br>
 
 #### 4 channels
 
@@ -133,11 +134,13 @@ HDSPe AIO Pro
   <source src="audio/8%20channel%20AIO%20AMD.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
+<br><br>
 
 When listening audio clips, recall they were recorded at the plug-in instance count specified above. Comparing AIO Pro with the Babyface Pro FS clips would be useless, because they differ in the number of instances. At the higher PCIe count, the USB interface would be incurring in heavy artifacts. I decided to capture these clips at the point where artifacts started to be audible - but note this is a <ins>broad range</ins> - artifacts appear first at a lower rate of clicking noises or a sporadic glitch. As the plug-in count is raised, artifacts increase until the point of breakup, reaching a stage where original sound is severely mangled.
 
 ![img](images/Four_loaded_cores_Babyface.png)\
 <sub>*% CPU utilization in Task Manager running the 8 channel project in Ableton Live, with Babyface Pro FS USB 2.0*</sub>
+<br><br>
 
 ![img](images/Four_loaded_cores.png)\
 <sub>*% CPU utilization in Task Manager running the 8 channel project in Ableton Live, with HDSPe AIO Pro PCIe*</sub>
@@ -152,7 +155,7 @@ AMD was the top performer with the audio evidence revealing fewest audible dropo
 
 #### Intel HD / AMD / NVIDIA comparison with Babyface Pro FS
 
-##### 1 channel
+#### 1 channel
 
 AMD
 <audio controls>
@@ -171,7 +174,7 @@ intel UHD
   Your browser does not support the tag.
 </audio>
 
-##### 4-channel
+#### 4-channel
 
 AMD
 <audio controls>
@@ -189,7 +192,7 @@ intel UHD
   Your browser does not support the tag.
 </audio>
 
-##### 8-channel
+#### 8-channel
 
 AMD
 <audio controls>
@@ -209,7 +212,7 @@ intel UHD
 
 #### AMD / NVIDIA comparison with HDSPe AIO Pro PCIe
 
-##### 1 channel
+#### 1 channel
 
 AMD
 <audio controls>
@@ -222,7 +225,7 @@ NVIDIA
   Your browser does not support the tag.
 </audio>
 
-##### 4 channels
+#### 4 channels
 
 AMD 
 <audio controls>
@@ -235,7 +238,7 @@ NVIDIA
   Your browser does not support the tag.
 </audio>
 
-##### 8 channels
+#### 8 channels
 
 AMD 
 <audio controls>
@@ -247,13 +250,13 @@ NVIDIA
     <source src="audio/8%20channel%20AIO%20NVIDIA.mp3" type="audio/mpeg">
   Your browser does not support the tag.
 </audio>
+<br><br>
 
 With the PCIe card, generated dropout artifacts have a less obvious character to evaluate because they are prone to a distinct glitching/skipping sound, rather than the fast clicking dropouts of the Babyface Pro FS that begin to appear. Regardless of this characteristic, and through subjective hearing, we are able quantify a cleaner playback in the AMD compared to the NVIDIA card, which has a slightly higher number of glitching events. It was chosen to leave the intel UHD graphics out of the PCIe comparison since the differences are less apparent, in contrast with the less resilient Babyface interface, which showed higher susceptibility to changes in graphics hardware.
 
 ## Excluding *Core 0* in Ableton Live with CPU affinity
 
 An additional experiment with the Babyface FS Pro to verify possible performance enhancement related to CPU core affinity. Using the AMD adapter as graphics reference to minimize bottlenecks, this investigation is most relevant in the 4 and 8-channel projects, where all cores are fully utilized. This brief test consisted in increasing the number of active CPUs to 5 physical cores, from the previous 4, and exclude Ableton process from `CPU 0` by setting its core affinity to the other remaining cores. The plug-in CPU load remains equally distributed across the previous four active cores, with an additional undisturbed core for the the remaining background processes and DPC interrupts.
-<br/><br/>
 
 ![img](images/Affinity_selection.png)\
 <sub>*Processor affinity setting excluding `CPU 0`*</sub>
@@ -266,7 +269,7 @@ The results were surprising here. Limiting the analysis to Babyface Pro FS, it w
 
 #### Babyface Pro FS & AMD graphics
 
-##### 4-channel
+#### 4-channel
 
 4 active cores
 <audio controls>
@@ -280,7 +283,7 @@ The results were surprising here. Limiting the analysis to Babyface Pro FS, it w
   Your browser does not support the tag.
 </audio>
 
-##### 8-channel
+#### 8-channel
 
 4 active cores
 <audio controls>
