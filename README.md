@@ -80,7 +80,6 @@ Strictly looking at round-trip latency values, we can see the PCIe AIO Pro holds
 
 - Single-Core load : A single audio track, progressively loaded with plug-in instances until audible dropouts occurred.
 - Balanced per-core load  : Same as previous, but with 4 and 8 tracks, to evenly allocate the load across the 4 active CPU cores.
-<br/><br/>
 
 ![img](images/Ableton_project.png)\
 <sub>*The 4-channel project in Ableton Live*</sub>
