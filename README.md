@@ -50,7 +50,7 @@ Readings were made over a 60-second interval.
 ### RME Settings
 
 * `Optimize Multi-Client Mixing` disabled to maximize CPU usage
-* `MMCSS` enabled as it displayed superior performance
+* `MMCSS` enabled as it displayed superior performance in certain contexts
 
 <sub>*Results may vary with other DAWs. When the computer is overloaded to the point of graphics slowdown (with all cores utilized, close to 100%), it has diminishing returns - MMCSS ASIO thread deprioritization will happen more often (26 real-time down to 4-7) and at greater time lengths past a certain load threshold.*</sub>
 <br>
