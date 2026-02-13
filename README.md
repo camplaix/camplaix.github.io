@@ -92,7 +92,7 @@ Using the AMD graphics card as reference - The PCIe AIO Pro allowed dropout-free
 
 As side note, setting Ableton process affinity to exclude `CPU 0` has positive effects on the single channel test, possibly leaving the software free from the core where most interrupts are registered. Detrimental effects were seen for the remaining tests, where all cores are fully utilized - because there would be one fewer processor to distribute the processing load
 
-![img](images/plugin_instances.png)\
+![img](images/plugin_instances.svg)\
 <sub>*Total number of plug-in instances across the three projects*</sub>
 
 #### 1 channel
