@@ -4,7 +4,8 @@ Low-latency audio musings.
 
 ## Articles
 
-### [Beyond P-Cores: How Apple's 3-Tier Silicon (M5/M6) Impacts Low-Latency DSP Buffer Scaling and Core Allocation](https://camplaix.github.io/beyond-p-cores-apple-m6-ableton-live-12/)
+### [Beyond P-Cores: Apple M5/M6 Core Tiers and Low-Latency Audio](https://camplaix.github.io/beyond-p-cores-apple-m6-ableton-live-12/)
+
 
 Ableton Live 12 multi-core scaling on the Mac mini M6 (2 Super + 4 P-cores) vs. the Intel Core Ultra 7 270K Plus. Covers Super-to-P-core spillover, unpredictable core placement on macOS, and a buffer inversion effect where raising the buffer cuts single-track headroom.
 
