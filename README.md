@@ -16,6 +16,12 @@ Ableton Live 12 at high CPU load on Windows 11: RME HDSPe AIO Pro (PCIe) vs. Bab
 
 <sub>*Windows 11 25H2 · Intel i7 8700K · Ableton Echo* · [Files on GitHub](https://github.com/camplaix/rme-pcie-usb-graphics-low-latency-ableton-live-12)</sub>
 
+### [State of Things: DAW Low Latency, C-States and Discrete vs. Integrated Graphics](https://camplaix.github.io/c-states-integrated-graphics-ableton-live/)
+
+Ableton Live 10 and Studio One 4 at 64 samples on an i7 8700K: how C-States, Ableton's `-_ForceGdiBackend` flag and Intel UHD 630 vs. AMD vs. NVIDIA graphics affect the real-time meter and audible glitches across light and heavy projects.
+
+<sub>*Windows 10 1909 · Intel i7 8700K · RME Babyface Pro FS · Ableton Live 10 and Studio One 4* · [Files on GitHub](https://github.com/camplaix/c-states-integrated-graphics-ableton-live)</sub>
+
 ## Studio gear
 
 ### [Madlib's Studio Gear, circa 2005](https://camplaix.github.io/madlib-gear-2005/)
