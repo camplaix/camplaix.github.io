@@ -1,6 +1,6 @@
 # camplaix
 
-Independent research on real-time audio performance: low-latency DSP, CPU scheduling and how hardware behaves under load in Ableton Live 12.
+Low-latency audio musings.
 
 ## Articles
 
