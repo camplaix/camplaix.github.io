@@ -21,7 +21,7 @@ Ableton Live 12 at high CPU load on Windows 11: RME HDSPe AIO Pro (PCIe) vs. Bab
 
 Ableton Live 10 and Studio One 4 at 64 samples on an i7 8700K: how C-States, Ableton's `-_ForceGdiBackend` flag and Intel UHD 630 vs. AMD vs. NVIDIA graphics affect the real-time meter and audible glitches across light and heavy projects.
 
-<sub>*February 2026 · Windows 11 25H2 · Intel i7 8700K · Ableton Echo*</sub>
+<sub>*March 2020 · Windows 10 1909 · Intel i7 8700K · RME Babyface Pro FS · Ableton Live 10 and Studio One 4*</sub>
 
 ## Studio gear
 
